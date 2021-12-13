@@ -14,36 +14,20 @@
                         <table class="min-w-full divide-y divide-gray-200 border">
                             <thead>
                             <tr>
-                                <th class="px-6 py-3 bg-gray-50 text-left">
-                                    <span class="text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">ID</span>
-                                </th>
-                                <th class="px-6 py-3 bg-gray-50 text-left">
-                                    <span class="text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Name</span>
-                                </th>
-                                <th class="px-6 py-3 bg-gray-50 text-left">
-                                    <span class="text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Email</span>
-                                </th>
-                                <th class="px-6 py-3 bg-gray-50 text-left">
-                                    <span class="text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Created at</span>
-                                </th>
+                                <x-table-th>ID</x-table-th>
+                                <x-table-th>Name</x-table-th>
+                                <x-table-th>Email</x-table-th>
+                                <x-table-th>Created at</x-table-th>
                             </tr>
                             </thead>
 
                             <tbody class="bg-white divide-y divide-gray-200 divide-solid">
                             @foreach($users as $user)
                                 <tr class="bg-white">
-                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
-                                        {{ $user->id }}
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
-                                        {{ $user->name }}
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
-                                        {{ $user->email }}
-                                    </td>
-                                    <td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
-                                        {{ $user->created_at }}
-                                    </td>
+                                    <x-table-td>{{ $user->id }}</x-table-td>
+                                    <x-table-td>{{ $user->name }}</x-table-td>
+                                    <x-table-td>{{ $user->email }}</x-table-td>
+                                    <x-table-td>{{ $user->created_at }}</x-table-td>
                                 </tr>
                             @endforeach
                             </tbody>

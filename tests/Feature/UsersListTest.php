@@ -23,9 +23,7 @@ class UsersListTest extends TestCase
         }
 
         foreach (['id', 'name', 'email', 'created_at'] as $column) {
-            $response->assertSee('<td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">
-                                        ' . $user->$column . '
-                                    </td>', false);
+            $response->assertSee('<td class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-900">' . $user->$column . '</td>', false);
         }
     }
 }
